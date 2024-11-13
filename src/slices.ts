@@ -1,7 +1,7 @@
 import { $ctx } from '@milkdown/utils'
 import type { Mark } from '@milkdown/prose/model'
 import { html } from 'atomico'
-import { withMeta } from '../__internal__/meta'
+import { withMeta } from './__internal__/meta'
 
 export interface LinkToolTipState {
   mode: 'preview' | 'edit'

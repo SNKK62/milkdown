@@ -1,7 +1,7 @@
 import type { Ctx } from '@milkdown/ctx'
 import { linkTooltipAPI } from '../slices'
 import { linkEditTooltip } from '../tooltips'
-import { defIfNotExists } from '../../__internal__/helper'
+import { defIfNotExists } from '../__internal__/helper'
 import { LinkEditElement } from './edit-component'
 import { LinkEditTooltip } from './edit-view'
 

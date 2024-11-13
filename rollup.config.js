@@ -6,7 +6,7 @@ import json from '@rollup/plugin-json'
 import resolve from '@rollup/plugin-node-resolve'
 import esbuild from 'rollup-plugin-esbuild'
 
-import pkg from './package.json' assert { type: 'json' }
+import pkg from './package.json' with { type: 'json' }
 
 const external = [...Object.keys(pkg.dependencies), ...Object.keys(pkg.peerDependencies || {}), /@milkdown\/prose/]
 
@@ -57,8 +57,10 @@ const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 const dirs = fs.readdirSync(path.resolve(dirname, './src'))
 
-export default () =>
-  dirs
-    .filter(x => x !== '__internal__' && !x.includes('index'))
-    .flatMap(componentModule)
-    .concat(main)
+// export default () =>
+//   dirs
+//     .filter(x => x !== '__internal__' && !x.includes('index'))
+//     .flatMap(componentModule)
+//     .concat(main)
+
+export default () => main

@@ -31,18 +31,10 @@
       ".": {
         "types": "./lib/index.d.ts",
         "import": "./lib/index.es.js"
-      },
-      "./link-tooltip": {
-        "types": "./lib/link-tooltip/index.d.ts",
-        "import": "./lib/link-tooltip/index.es.js"
       }
     },
     "typesVersions": {
-      "*": {
-        "link-tooltip": [
-          "./lib/link-tooltip/index.d.ts"
-        ]
-      }
+      "*": {}
     }
   },
   "files": [
@@ -93,6 +85,10 @@
     "@milkdown/preset-gfm": "^7.2.0",
     "@milkdown/prose": "^7.2.0",
     "@milkdown/transformer": "^7.2.0",
-    "@milkdown/utils": "^7.2.0"
+    "@milkdown/utils": "^7.2.0",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "rollup-plugin-esbuild": "^6.1.1"
   }
 }
