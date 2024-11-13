@@ -45,6 +45,7 @@ export interface LinkTooltipConfig {
   onCopyLink: (link: string) => void
   inputPlaceholder: string
   shouldOpenOutside: (src: string) => boolean
+  getActualSrc: (src: string) => string
 }
 
 const defaultConfig: LinkTooltipConfig = {
@@ -55,6 +56,7 @@ const defaultConfig: LinkTooltipConfig = {
   onCopyLink: () => {},
   inputPlaceholder: 'Paste link...',
   shouldOpenOutside: () => true,
+  getActualSrc: (src: string) => src
 }
 
 export const linkTooltipConfig = $ctx({

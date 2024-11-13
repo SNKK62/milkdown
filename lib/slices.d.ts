@@ -24,6 +24,7 @@ export interface LinkTooltipConfig {
     onCopyLink: (link: string) => void;
     inputPlaceholder: string;
     shouldOpenOutside: (src: string) => boolean;
+    getActualSrc: (src: string) => string;
 }
 export declare const linkTooltipConfig: import("@milkdown/utils").$Ctx<{
     linkIcon: () => ReturnType<typeof html>;
@@ -33,5 +34,6 @@ export declare const linkTooltipConfig: import("@milkdown/utils").$Ctx<{
     onCopyLink: (link: string) => void;
     inputPlaceholder: string;
     shouldOpenOutside: (src: string) => boolean;
+    getActualSrc: (src: string) => string;
 }, "linkTooltipConfigCtx">;
 //# sourceMappingURL=slices.d.ts.map

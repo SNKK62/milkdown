@@ -34,31 +34,13 @@ export const linkPreviewComponent: Component<LinkPreviewProps> = ({ config, src,
     }
   }
 
-  if (config?.shouldOpenOutside(src ?? "")) {
-    return html`
-      <host>
-        <div class="link-preview" onmousedown=${onClickPreview}>
-          <span class="link-icon">
-            ${config?.linkIcon()}
-          </span>
-          <a href=${src} target="_blank" class="link-display">${src}</a>
-          <span class="button link-edit-button" onmousedown=${onClickEditButton}>
-            ${config?.editButton()}
-          </span>
-          <span class="button link-remove-button" onmousedown=${onClickRemoveButton}>
-            ${config?.removeButton()}
-          </span>
-        </div>
-      </host>
-    `
-  }
   return html`
     <host>
       <div class="link-preview" onmousedown=${onClickPreview}>
         <span class="link-icon">
           ${config?.linkIcon()}
         </span>
-        <a href=${src} class="link-display">${src}</a>
+        <a href=${src} target=${config?.shouldOpenOutside(src ?? "") ? "_blank" : "_self"} class="link-display">${src}</a>
         <span class="button link-edit-button" onmousedown=${onClickEditButton}>
           ${config?.editButton()}
         </span>
