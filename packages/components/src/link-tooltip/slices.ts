@@ -44,6 +44,7 @@ export interface LinkTooltipConfig {
   removeButton: () => ReturnType<typeof html>
   onCopyLink: (link: string) => void
   inputPlaceholder: string
+  shouldOpenOutside: (src: string) => boolean
 }
 
 const defaultConfig: LinkTooltipConfig = {
@@ -53,6 +54,7 @@ const defaultConfig: LinkTooltipConfig = {
   confirmButton: () => html`Confirm ⏎`,
   onCopyLink: () => {},
   inputPlaceholder: 'Paste link...',
+  shouldOpenOutside: () => true,
 }
 
 export const linkTooltipConfig = $ctx({

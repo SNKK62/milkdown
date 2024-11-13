@@ -10,7 +10,7 @@ import { LinkPreviewElement } from './preview-component'
 export class LinkPreviewTooltip implements PluginView {
   #content = new LinkPreviewElement()
   #provider: TooltipProvider
-  #slice: Slice<LinkToolTipState> = this.ctx.use(linkTooltipState.key)
+  #slice: Slice<LinkToolTipState>
 
   #hovering = false
 
