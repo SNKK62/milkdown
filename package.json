@@ -53,7 +53,7 @@
     "start": "rollup -c -w",
     "test": "vitest",
     "tsc": "tsc --noEmit && echo",
-    "build": "rimraf './lib' && tsc --emitDeclarationOnly && rollup -c && echo"
+    "build": "rm -rf './lib' && tsc --emitDeclarationOnly && rollup -c && echo"
   },
   "peerDependencies": {
     "@codemirror/language": "^6",

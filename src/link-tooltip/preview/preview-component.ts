@@ -34,7 +34,7 @@ export const linkPreviewComponent: Component<LinkPreviewProps> = ({ config, src,
     }
   }
 
-  if (config.shouldOpenOutside(src)) {
+  if (config?.shouldOpenOutside(src ?? "")) {
     return html`
       <host>
         <div class="link-preview" onmousedown=${onClickPreview}>
